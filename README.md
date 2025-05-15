@@ -15,13 +15,7 @@ This script automates the execution of the best benchmarking tools in the indust
 ## How to Run
 
 ```
-curl -sL https://yabs.sh | bash
-```
-
-or 
-
-```
-wget -qO- yabs.sh | bash
+wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -fgr
 ```
 
 **Local fio/iperf3 Packages**: If the tested system has fio and/or iperf3 already installed, the local package will take precedence over the precompiled binary.
@@ -35,7 +29,7 @@ wget -qO- yabs.sh | bash
 ### Flags (Skipping Tests, Reducing iperf Locations, Geekbench 4/5/6, etc.)
 
 ```
-curl -sL https://yabs.sh | bash -s -- -flags
+wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -fgr
 ```
 
 | Flag | Description |
