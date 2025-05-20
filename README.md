@@ -15,7 +15,7 @@ This script automates the execution of the best benchmarking tools in the indust
 ## How to Run
 
 ```
-wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -fgr
+wget -qO- bench.amnezia.tech | bash -s -- -fgr
 ```
 
 **Local fio/iperf3 Packages**: If the tested system has fio and/or iperf3 already installed, the local package will take precedence over the precompiled binary.
@@ -29,7 +29,7 @@ wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/y
 ### Flags (Skipping Tests, Reducing iperf Locations, Geekbench 4/5/6, etc.)
 
 ```
-wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -fgr
+wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -s -- -fgr
 ```
 
 | Flag | Description |
