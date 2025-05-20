@@ -12,14 +12,6 @@
 #             performance via fio. The script is designed to not require any dependencies
 #             - either compiled or installed - nor admin privileges to run.
 
-YABS_VERSION="v2025-04-20"
-
-echo -e '# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #'
-echo -e '#              Yet-Another-Bench-Script              #'
-echo -e '#                     '$YABS_VERSION'                    #'
-echo -e '# https://github.com/masonr/yet-another-bench-script #'
-echo -e '# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #'
-
 echo -e
 date
 TIME_START=$(date '+%Y%m%d-%H%M%S')
