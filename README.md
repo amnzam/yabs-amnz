@@ -1,21 +1,23 @@
-# Yet-Another-Bench-Script
-
-Presenting an attempt to create _yet another_ Linux server *bench*marking _script_...
-
-![](https://user-images.githubusercontent.com/8313125/106475387-e1f6da00-6473-11eb-918c-c785ebeef8b9.jpg)
-Logo design by [Dian Pratama](https://github.com/dianp)
-
-This script automates the execution of the best benchmarking tools in the industry. Included are several tests to check the performance of critical areas of a server: disk performance with [fio](https://github.com/axboe/fio), network performance with [iperf3](https://github.com/esnet/iperf), and CPU/memory performance with [Geekbench](https://www.geekbench.com/). The script is designed to not require any external dependencies to be installed nor elevated privileges to run. If there are any features that you would like to see added, feel free to submit an issue describing your feature request or fork the project and submit a PR!
-
-### **What's New With YABS?**
-* [27 Feb 2023](https://github.com/masonr/yet-another-bench-script/commit/06eaa2ab3b32355bec8278c51c4be93b3662a96d) - Newly released [Geekbench 6](https://www.geekbench.com/) is added as the default Geekbench test.
-* [26 Feb 2023](https://github.com/masonr/yet-another-bench-script/commit/f075baf59c3057983fff0a30ea0c746b5ea88d91) - Network information added to YABS output using [ip-api](https://ip-api.com/).
-* [15 Aug 2022](https://github.com/masonr/yet-another-bench-script/commit/ae24e70fbf7a4848e81a70cf829ec44e060e63d5) - Added JSON output/upload support to export or auto-upload of YABS results for sharing.
-
-## How to Run
+## How to Run (with flags)
 
 ```
-wget -qO- bench.amnezia.tech | bash -s -- -fgr
+curl -sL bench.amnezia.tech | bash -s -- -fgr
+```
+or
+
+```
+wget -qO- https://bench.amnezia.tech | bash -s -- -fgr
+```
+
+## How to Run (full test - without flags)
+
+```
+curl -sL bench.amnezia.tech | bash
+```
+or
+
+```
+wget -qO- https://bench.amnezia.tech | bash
 ```
 
 **Local fio/iperf3 Packages**: If the tested system has fio and/or iperf3 already installed, the local package will take precedence over the precompiled binary.
@@ -27,10 +29,6 @@ wget -qO- bench.amnezia.tech | bash -s -- -fgr
 **Windows Users**: This script can be run on Windows systems by using [Windows Subsystem for Linux v2 (WSL 2)](https://learn.microsoft.com/en-us/windows/wsl/about). WSLv1 will not run the script and binaries correctly.
 
 ### Flags (Skipping Tests, Reducing iperf Locations, Geekbench 4/5/6, etc.)
-
-```
-wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/yabs.sh | bash -s -- -fgr
-```
 
 | Flag | Description |
 | ---- | ----------- |
@@ -50,27 +48,6 @@ wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/y
 | -s \<url\> | Sends a JSON representation of the results to the designated URL(s) (see section below) |
 
 Options can be grouped together to skip multiple tests, i.e. `-fg` to skip the disk and system performance tests (effectively only testing network performance).
-
-**Geekbench License Key**: A Geekbench license key can be utilized during the Geekbench test to unlock all features. Simply put the email and key for the license in a file called _geekbench.license_. `echo "email@domain.com ABCDE-12345-FGHIJ-57890" > geekbench.license`
-
-### Submitting JSON Results
-
-Results from running this script can be sent to your benchmark results website of choice in JSON format. Invoke the `-s` flag and pass the URL to where the results should be submitted to:
-
-```
-curl -sL https://yabs.sh | bash -s -- -s "https://example.com/yabs/post"
-```
-
-JSON results can be sent to multiple endpoints by entering each site joined by a comma (e.g. "https://example.com/yabs/post,http://example.com/yabs2/post").
-
-Sites supporting submission of YABS JSON results:
-
-| Website | Example Command |
-| --- | --- |
-| [YABSdb](https://yabsdb.com/) | `curl -sL https://yabs.sh \| bash -s -- -s "https://yabsdb.com/add"` |
-| [VPSBenchmarks](https://www.vpsbenchmarks.com/yabs/get_started) | `curl -sL https://yabs.sh \| bash -s -- -s https://www.vpsbenchmarks.com/yabs/upload` |
-
-Example JSON output: [example.json](bin/example.json).
 
 ## Tests Conducted
 
