@@ -1,13 +1,13 @@
 ## How to Run (with flags)
 
 ```
-curl -sL bench.amnezia.tech | bash -s -- -fgr
+curl -sL https://bench.amnezia.tech | bash -s -- -fgr
 ```
 
 ## How to Run (full test - without flags)
 
 ```
-curl -sL bench.amnezia.tech | bash
+curl -sL https://bench.amnezia.tech | bash
 ```
 
 **Local fio/iperf3 Packages**: If the tested system has fio and/or iperf3 already installed, the local package will take precedence over the precompiled binary.
