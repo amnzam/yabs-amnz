@@ -1,3 +1,8 @@
+## RU-Checker
+```
+bash <(wget -qO- https://raw.githubusercontent.com/amnzam/yabs-amnz/refs/heads/master/ru-checker.sh)
+```
+
 ## How to Run (with flags)
 
 ```
