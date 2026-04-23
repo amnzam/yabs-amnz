@@ -47,6 +47,13 @@ fi
 # Sites to check (no scheme — HTTPS is used)
 readarray -t sites <<'SITES'
 vk.ru
+vk.com
+vkvideo.ru
+kinopoisk.ru
+www.wildberries.ru
+wb.ru
+ya.ru
+gosuslugi.ru
 hh.ru
 avito.ru
 2gis.ru
@@ -59,6 +66,11 @@ nalog.ru
 pochta.ru
 rutube.ru
 sberbank.ru
+www.mosenergosbyt.ru
+music.yandex.ru
+www.mosenergosbyt.ru
+www.rzd.ru
+mos.ru
 SITES
 
 curl_insecure=()
