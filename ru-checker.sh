@@ -66,7 +66,6 @@ nalog.ru
 pochta.ru
 rutube.ru
 sberbank.ru
-www.mosenergosbyt.ru
 music.yandex.ru
 www.mosenergosbyt.ru
 www.rzd.ru
